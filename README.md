@@ -73,21 +73,21 @@ cd project
 
 
 
-###2. Create a Virtual Environment (Optional)
+2. Create a Virtual Environment (Optional)
 
 python -m venv venv
 venv\Scripts\activate   # For Windows
 
 
 
-###3. Install Dependencies
+3. Install Dependencies
 
 pip install -r requirements.txt
 
 
 
 
-###4. Configure SQL Server in app.py
+4. Configure SQL Server in app.py
 
 pyodbc.connect(
     'DRIVER={ODBC Driver 17 for SQL Server};'
@@ -99,14 +99,14 @@ pyodbc.connect(
 
 
 
-###5. Start the Web App
+5. Start the Web App
 
 python app.py
 
 
 
 
-###📊 Dataset Info
+📊 Dataset Info
 ✅ 300,000+ labeled records
 
 ✅ Features include:
@@ -133,7 +133,7 @@ Scheduling (TDMA)
 
 
 
-###📷 Screenshots
+📷 Screenshots
 ![flow](https://github.com/user-attachments/assets/2dfd2946-90ca-4fe3-b503-92f0338efc32)
 ![signup](https://github.com/user-attachments/assets/8ce68810-4187-494c-858b-02025c2a9c90)
 ![Login page](https://github.com/user-attachments/assets/57ed8899-4e3c-44a3-8e87-4537f9dff1ce)
@@ -142,7 +142,7 @@ Scheduling (TDMA)
 
 
 
-###🔮 Future Enhancements
+🔮 Future Enhancements
 Live WSN data integration
 
 Deep learning model support (CNN, LSTM)
@@ -153,7 +153,7 @@ Interactive dashboards using Plotly or Dash
 
 Integration with alerting systems
 
-###👨‍💻 Author
+👨‍💻 Author
 Jayashree V
 Gokul Raj M
 Divkar G
