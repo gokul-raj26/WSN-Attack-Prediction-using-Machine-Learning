@@ -1,108 +1,174 @@
-# Wireless Sensor Network Attack Detection using Machine Learning
-This project focuses on detecting various attacks in Wireless Sensor Networks (WSNs) using machine learning algorithms. The system uses a dataset of sensor network activities and classifies network behavior into normal or attack types (e.g., Blackhole, Grayhole, Wormhole, Sybil, Hello Flood) using multi-class classification. It includes a web-based interface for real-time predictions.
+# 🛡️ Wireless Sensor Network (WSN) Attack Detection using Machine Learning
 
-🧠 Features
-Preprocessing and training on a labeled WSN dataset
+This project focuses on detecting various cyberattacks in **Wireless Sensor Networks (WSNs)** using supervised machine learning. It features a trained model deployed through a **Flask-based web application** that classifies input data into either normal behavior or one of several types of attacks.
 
-Multiple machine learning models (e.g., Random Forest, Decision Tree)
+---
 
-Real-time prediction via web interface
+## 📁 Project Structure
+For the website only
+project/
+├── static/
+│ └── style.css
+├── templates/
+│ ├── about.html
+│ ├── contact.html
+│ ├── dashboard.html
+│ ├── home.html
+│ ├── login.html
+│ ├── predict.html
+│ └── signup.html
+├── app.py
+└── model.pkl
 
-Attack classification into 6 types
 
-Accuracy metrics to evaluate models
 
-Deployment using Flask (Python)
+---
 
-Visualizations of data and results
+## 🚀 Features
 
-📁 Project Structure
-php
-Copy
-Edit
-wsn-attack-detection/
-│
-├── dataset/                  # Sensor network dataset (CSV)
-├── models/                   # Trained ML models (.pkl files)
-├── static/                   # CSS, JS, images
-├── templates/                # HTML templates (UI)
-├── app.py                    # Flask application
-├── train_model.py            # Script to train and evaluate models
-├── preprocess.py             # Data cleaning and preprocessing
-└── README.md                 # Project documentation
-⚙️ Technologies Used
-Python 3.x
+- ⚙️ Real-time attack prediction via web interface
+- 🔐 User authentication (Login & Signup)
+- 📊 Dashboard with prediction history and analysis
+- 🧠 Integrated ML model trained on labeled WSN dataset
+- 📂 Visualization using Matplotlib and Power BI
+- 🗂️ SQL Server database connectivity
 
-Scikit-learn
+---
 
-Pandas, NumPy
+## 🧠 Machine Learning Algorithms Used
 
-Matplotlib, Seaborn
+1. **Logistic Regression**
+   - Used as a baseline model
+   - Efficient and interpretable
+   - Good for binary and multiclass tasks
 
-Flask
+2. **Random Forest Classifier** ✅ *(Best Performer)*
+   - Ensemble of decision trees
+   - Achieved accuracy > 95%
+   - Robust and scalable
 
-HTML5, CSS3, JavaScript
+3. **AdaBoost Classifier**
+   - Boosts weak learners to improve accuracy
+   - Effective on complex and imbalanced data
+   - Second-best performance
 
-📊 Machine Learning Models
-Random Forest Classifier
+---
 
-Decision Tree
+## 🔧 Tech Stack
 
-Naive Bayes
+- **Backend:** Python 3.10+, Flask
+- **Frontend:** HTML5, CSS3, Bootstrap, JavaScript
+- **ML Libraries:** scikit-learn, pandas, numpy
+- **Database:** SQL Server (via pyodbc)
+- **Visualization:** Matplotlib, Power BI
 
-Logistic Regression
+---
 
-Evaluation using accuracy, precision, recall, and F1-score.
+## ⚙️ How to Run the Project
 
-🚀 How to Run the Project
-1. Clone the repository
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/wsn-attack-detection.git
+cd project
+
+
+
+2. Create a Virtual Environment (Optional)
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/wsn-attack-detection.git
-cd wsn-attack-detection
-2. Install Dependencies
+python -m venv venv
+venv\Scripts\activate   # For Windows
+
+
+
+3. Install Dependencies
 bash
 Copy
 Edit
 pip install -r requirements.txt
-3. Train the Model
-bash
+
+
+
+
+4. Configure SQL Server in app.py
+python
 Copy
 Edit
-python train_model.py
-4. Run the Web App
+pyodbc.connect(
+    'DRIVER={ODBC Driver 17 for SQL Server};'
+    'SERVER=YourServerName;'
+    'DATABASE=WSN_Database;'
+    'Trusted_Connection=yes;'
+)
+
+
+
+
+5. Start the Web App
 bash
 Copy
 Edit
 python app.py
-Open your browser and navigate to http://127.0.0.1:5000
 
-🔍 Dataset
-The dataset includes the following features:
 
-Node ID, Neighbor count, Transmission range, Energy
 
-Packet delivery ratio, Forwarding rate
 
-Labeled as: Normal, Blackhole, Grayhole, Wormhole, Sybil, Hello Flood
+📊 Dataset Info
+✅ 300,000+ labeled records
+
+✅ Features include:
+
+Distance to Cluster Head
+
+Energy Usage
+
+Packet Transmission Stats
+
+Node Role (CH or not)
+
+✅ Attack Classes:
+
+Normal
+
+Blackhole
+
+Grayhole
+
+Flooding
+
+Scheduling (TDMA)
+
+
 
 📷 Screenshots
-Add screenshots of your UI here (if available)
+![flow](https://github.com/user-attachments/assets/2dfd2946-90ca-4fe3-b503-92f0338efc32)
+![signup](https://github.com/user-attachments/assets/8ce68810-4187-494c-858b-02025c2a9c90)
+![Login page](https://github.com/user-attachments/assets/57ed8899-4e3c-44a3-8e87-4537f9dff1ce)
+![Home page](https://github.com/user-attachments/assets/bf533838-48cb-4b3b-ad22-aa3996aec7de)
+![Prediction page](https://github.com/user-attachments/assets/939c207d-bb9e-4baf-b107-ccb25888fd59)
 
-📚 Future Improvements
-Integrate deep learning models
 
-Extend to real-time sensor network simulations
 
-Add user authentication for the web interface
+🔮 Future Enhancements
+Live WSN data integration
 
-Improve dataset size and variety
+Deep learning model support (CNN, LSTM)
 
-👨‍💻 Authors
+Deployment on edge devices
+
+Interactive dashboards using Plotly or Dash
+
+Integration with alerting systems
+
+👨‍💻 Author
+Jayashree V
 Gokul Raj M
+Divkar G
+🎓 Final Year Student,Dhanalakshmi College of Engineering
+📧 Email: your-gimzrofficial@gmail.com
 
-Final Year Student, Anna University
 
-📜 License
-This project is licensed under the MIT License.
+
+
+
