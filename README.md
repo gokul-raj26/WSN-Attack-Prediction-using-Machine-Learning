@@ -5,19 +5,33 @@ This project focuses on detecting various cyberattacks in **Wireless Sensor Netw
 ---
 
 ## 📁 Project Structure
+
 For the website only
+
 project/
+
 ├── static/
+
 │ └── style.css
+
 ├── templates/
+
 │ ├── about.html
+
 │ ├── contact.html
+
 │ ├── dashboard.html
+
 │ ├── home.html
+
 │ ├── login.html
+
 │ ├── predict.html
+
 │ └── signup.html
+
 ├── app.py
+
 └── model.pkl
 
 
@@ -75,14 +89,14 @@ cd project
 
 2. Create a Virtual Environment (Optional)
 
-python -m venv venv
-venv\Scripts\activate   # For Windows
+       python -m venv venv
+       venv\Scripts\activate   # For Windows
 
 
 
 3. Install Dependencies
 
-pip install -r requirements.txt
+         pip install -r requirements.txt
 
 
 
@@ -90,9 +104,13 @@ pip install -r requirements.txt
 4. Configure SQL Server in app.py
 
 pyodbc.connect(
+
     'DRIVER={ODBC Driver 17 for SQL Server};'
+    
     'SERVER=YourServerName;'
+    
     'DATABASE=WSN_Database;'
+    
     'Trusted_Connection=yes;'
 )
 
@@ -101,7 +119,7 @@ pyodbc.connect(
 
 5. Start the Web App
 
-python app.py
+       python app.py
 
 
 
@@ -154,10 +172,15 @@ Interactive dashboards using Plotly or Dash
 Integration with alerting systems
 
 👨‍💻 Author
+
 Jayashree V
+
 Gokul Raj M
+
 Divkar G
+
 🎓 Final Year Student,Dhanalakshmi College of Engineering
+
 📧 Email: your-gimzrofficial@gmail.com
 
 
