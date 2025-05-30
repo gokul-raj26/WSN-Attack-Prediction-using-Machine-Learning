@@ -1,0 +1,28 @@
+<!-- Dashboard Page -->
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="content">
+    <h2>Model Accuracy</h2>
+    <canvas id="accuracyChart"></canvas>
+    <script>
+      new Chart(document.getElementById('accuracyChart'), {
+        type: 'bar',
+        data: {
+          labels: ['Logistic Regression', 'Random Forest', 'AdaBoost'],
+          datasets: [{
+            label: 'Accuracy',
+            data: [93, 96, 94],
+            backgroundColor: ['blue', 'green', 'orange']
+          }]
+        }
+      });
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- Home Page -->
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <a href="{{ url_for('predict') }}">Predict</a>
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    <a href="{{ url_for('logout', username=session['username']) }}">Logout</a>
+  </div>
+  <div class="content">
+    <h2>Welcome, {{ username.title() }}</h2>
+    <p>Start using the WSN Attack Detection System</p>
+  </div>
+</body>
+</html>
