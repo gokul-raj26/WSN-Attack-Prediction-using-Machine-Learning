@@ -181,7 +181,7 @@ Divkar G
 
 🎓 Final Year Student,Dhanalakshmi College of Engineering
 
-📧 Email: your-gimzrofficial@gmail.com
+📧 Email: gimzrofficial@gmail.com
 
 
 
