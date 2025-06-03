@@ -82,8 +82,7 @@ project/
 
 ### 1. Clone the Repository
 
-git clone https://github.com/your-username/wsn-attack-detection.git
-cd project
+git clone 
 
 
 
